@@ -3,23 +3,13 @@
 --
 -- See the kickstart.nvim README for more information
 
+vim.lsp.config('ruff', {})
+vim.lsp.enable 'ruff'
+
+-- NOTE: when ty is ready, uncomment here and get rid of pyright
+-- vim.lsp.config('ty', {})
+-- vim.lsp.enable 'ty'
+
 return {
   require 'kickstart.plugins.autopairs',
-
-  require('lspconfig').ruff.setup {
-    init_options = {
-      settings = {
-        logLevel = 'info',
-      },
-    },
-  },
-
-  -- NOTE: for future use of astral's ty
-  -- require('lspconfig').ty.setup {
-  --   init_options = {
-  --     settings = {
-  --       logLevel = 'info',
-  --     },
-  --   },
-  -- },
 }
