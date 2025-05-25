@@ -677,13 +677,14 @@ require('lazy').setup({
           settings = {
             python = {
               analysis = {
-                typeCheckingMode = 'strict',
-                autoSearchPaths = true,
-                useLibraryCodeForTypes = true,
-                autoImportCompletions = true,
+                -- done by ruff
+                ignore = { '*' },
               },
             },
-            pyright = { disableOrganizeImports = true }, -- done by ruff server
+            pyright = {
+              -- done by ruff
+              disableOrganizeImports = true,
+            },
           },
         },
         -- rust_analyzer = {},
