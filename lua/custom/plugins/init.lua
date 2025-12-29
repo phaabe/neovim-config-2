@@ -7,8 +7,8 @@ vim.lsp.config('ruff', {})
 vim.lsp.enable 'ruff'
 
 -- NOTE: when ty is ready, uncomment here and get rid of pyright
--- vim.lsp.config('ty', {})
--- vim.lsp.enable 'ty'
+vim.lsp.config('ty', {})
+vim.lsp.enable 'ty'
 
 return {
   require 'kickstart.plugins.autopairs',
