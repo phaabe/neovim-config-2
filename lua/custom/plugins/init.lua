@@ -12,4 +12,5 @@ vim.lsp.enable 'ty'
 
 return {
   require 'kickstart.plugins.autopairs',
+  require 'custom.plugins.render-markdown',
 }
