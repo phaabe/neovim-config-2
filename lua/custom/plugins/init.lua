@@ -7,7 +7,13 @@ vim.lsp.config('ruff', {})
 vim.lsp.enable 'ruff'
 
 -- NOTE: when ty is ready, uncomment here and get rid of pyright
-vim.lsp.config('ty', {})
+vim.lsp.config('ty', {
+  settings = {
+    ty = {
+      completions = { autoImport = false },
+    },
+  },
+})
 vim.lsp.enable 'ty'
 
 return {
